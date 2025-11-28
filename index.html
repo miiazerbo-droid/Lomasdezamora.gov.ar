@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de Habilitación Comercial – Municipalidad de Lomas de Zamora</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <img src="logo-removebg-preview.png" alt="Logo Município de Lomas de Zamora" class="logo">
+      <h1>Solicitud de Habilitación Comercial</h1>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="form-card">
+      <form id="datosForm">
+        <label for="email">Correo electrónico *</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="nombre">Nombre y Apellido *</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="dni">DNI *</label>
+        <input type="text" id="dni" name="dni" required>
+
+        <label for="telefono">Teléfono *</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="direccion">Dirección del Comercio *</label>
+        <input type="text" id="direccion" name="direccion" required>
+
+        <button type="button" onclick="irADocumentacion()">Continuar a Documentación</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="logo-removebg-preview.png" alt="Logo Municipalidad de Lomas de Zamora">
+      </div>
+      <div class="footer-info">
+        <p>Dirección: Av. Hipólito Yrigoyen 555, Lomas de Zamora, Buenos Aires.</p>
+        <p>Teléfono: 0800-666-6666 | 0800-122-5662</p>
+        <p>© Municipalidad de Lomas de Zamora | Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function irADocumentacion(){
+      const form = document.getElementById('datosForm');
+      if(form.checkValidity()){
+        // Redirigir al formulario de carga de documentos
+        window.location.href = "https://forms.gle/aBYqUnNi5RofVHmu8";
+      } else {
+        form.reportValidity();
+      }
+    }
+  </script>
+
+</body>
+</html>
